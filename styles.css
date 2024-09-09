@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,700&display=swap");
+
+:root {
+  /* Colors */
+  --clr-primary-1: #110904; /* Earthly Mocha for texts */
+  --clr-primary-2: #0E1514; /* Forest Shadow for footer */
+  --clr-primary-3: #101415; /* Slate Shadow for textarea text */
+  --clr-primary-4: #d0d0d0; /* Light grey for border */
+  --clr-white: #ffffff; /* Common white background color */
+  --clr-button-bg: #0E1514; /* Forest Shadow for button */
+  --clr-button-hover-bg: #2b2b2b; /* Darker grey for button hover background */
+  --clr-button-hover-border: #ffffff; /* White border for button hover */
+  --ff-primary: "EB Garamond", serif; /* Font for titles and labels */
+  --ff-secondary: "Arial", sans-serif; /* Font for textarea */
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-secondary);
+  background-color: #edf2f7; /* Background color */
+  color: var(--clr-primary-1); /* Text color */
+  line-height: 1.5;
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px; /* Larger container for bigger textarea */
+  width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #110904; /* Earthly Mocha for the title */
+  font-family: var(--ff-primary);
+}
+
+label {
+  display: block;
+  font-size: 1.25rem;
+  color: #110904; /* Earthly Mocha for labels */
+  margin-bottom: 0.5rem;
+  font-family: var(--ff-primary);
+}
+
+.input-field {
+  width: 100%;
+  height: 200px; /* Larger textarea height */
+  padding: 0.5rem;
+  border: 1px solid var(--clr-primary-4); /* Less prominent border */
+  border-radius: var(--radius);
+  font-size: 12px; /* Font size for textarea */
+  font-family: var(--ff-secondary); /* Arial for textarea text */
+  margin-bottom: 1rem;
+  background-color: var(--clr-white); /* Common white for textarea background */
+  color: var(--clr-primary-3); /* Slate Shadow for textarea text */
+  resize: none; /* Disable textarea resize */
+}
+
+.btn {
+  text-transform: uppercase;
+  background: var(--clr-button-bg); /* Forest Shadow for button */
+  color: var(--clr-white);
+  padding: 0.5rem 1rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid transparent; /* Transparent border initially */
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  margin: 0.5rem;
+}
+
+.btn.check {
+  background: var(--clr-button-bg); /* Forest Shadow for button */
+}
+
+.btn.check:hover {
+  background: var(--clr-button-hover-bg); /* Darker grey for button hover background */
+  border-color: var(--clr-button-hover-border); /* White border for button hover */
+}
+
+#message {
+  font-weight: bold;
+  color: var(--clr-primary-1); /* Earthly Mocha for the message */
+}
+
+footer {
+  background-color: #0E1514; /* Forest Shadow for footer */
+  color: var(--clr-white);
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon {
+  color: var(--clr-white);
+  font-size: 1.5rem;
+}
+
+.social-icon i {
+  vertical-align: middle;
+}
